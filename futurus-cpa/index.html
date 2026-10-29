@@ -1,91 +1,1004 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#10233d" />
-  <meta name="description" content="Participe da Autoavaliação Institucional CPA 2026 da Faculdade Singular Futurus. Acesse os formulários de avaliação." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10233d">
+  <meta name="description" content="Participe da Avaliação Institucional CPA 2026 da Faculdade Singular Futurus.">
   <title>CPA 2026 | Faculdade Singular Futurus</title>
-  <link rel="icon" type="image/png" href="./logo-futurus.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="./logo-futurus.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    :root { --navy:#10233d; --navy-light:#192f50; --gold:#c5a04f; --background:#f4f6f9; --ink:#142843; --muted:#617086; --line:#dce3eb; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; font-family:'DM Sans',sans-serif; color:var(--ink); background:var(--background); }
-    a { -webkit-tap-highlight-color:transparent; }
-    .top { min-height:340px; background:radial-gradient(circle at 85% 10%, #203a5d 0, transparent 35%), linear-gradient(125deg,#172e4d,#0e2038 75%); position:relative; overflow:hidden; }
-    .top::after { content:""; position:absolute; width:500px; height:500px; border:1px solid rgba(255,255,255,.06); border-radius:50%; right:-190px; bottom:-300px; pointer-events:none; }
-    .wrap { max-width:1000px; padding:0 26px; margin:auto; }
-    .header { display:flex; justify-content:space-between; align-items:center; padding-top:34px; gap:20px; position:relative; z-index:1; }
-    .logo { display:block; width:248px; max-width:65vw; padding:11px 14px; background:white; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,.09); }
-    .header-tag { color:#c7d3df; font-size:12px; text-transform:uppercase; letter-spacing:.2em; font-weight:700; }
-    .hero { padding:65px 0 112px; position:relative; z-index:1; }
-    .eyebrow { font-family:Montserrat,sans-serif; letter-spacing:.23em; text-transform:uppercase; color:var(--gold); font-weight:800; font-size:11px; margin:0 0 16px; }
-    h1 { color:white; font:700 clamp(32px,5vw,51px)/1.18 Montserrat,sans-serif; letter-spacing:-.04em; margin:0; max-width:760px; }
-    .goldline { width:52px; height:3px; background:var(--gold); margin:23px 0; }
-    .subtitle { color:#d5deeb; font-size:16px; line-height:1.8; max-width:680px; margin:0; }
-    main { margin-top:-72px; position:relative; z-index:2; padding-bottom:72px; }
-    .panel { background:white; border:1px solid var(--line); border-radius:20px; box-shadow:0 18px 55px rgba(15,32,53,.07); padding:40px; }
-    .section-tag { font-size:12px; color:#a57e32; font-weight:800; letter-spacing:.15em; text-transform:uppercase; margin:0 0 10px; }
-    h2 { font:800 clamp(22px,3.5vw,30px)/1.25 Montserrat,sans-serif; margin:0 0 14px; letter-spacing:-.035em; }
-    .intro { color:var(--muted); line-height:1.8; margin:0 0 30px; max-width:760px; }
-    .options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
-    .option { border:1px solid var(--line); border-radius:15px; padding:27px; display:flex; flex-direction:column; transition:transform .2s,border-color .2s,box-shadow .2s; background:#fff; }
-    .option:hover { transform:translateY(-3px); border-color:#c5a04f; box-shadow:0 14px 25px rgba(16,35,61,.08); }
-    .option-number { width:42px; height:42px; display:grid; place-items:center; background:#f5efe2; color:#a27c30; border-radius:12px; font:800 16px Montserrat,sans-serif; margin-bottom:23px; }
-    h3 { font:800 19px/1.35 Montserrat,sans-serif; letter-spacing:-.025em; margin:0 0 12px; }
-    .option p { margin:0 0 27px; color:var(--muted); line-height:1.75; font-size:14px; flex-grow:1; }
-    .action { display:flex; align-items:center; justify-content:space-between; gap:12px; border-radius:10px; padding:15px 17px; text-decoration:none; font-weight:800; font-size:14px; background:var(--navy); color:#fff; transition:background .2s; }
-    .action:hover { background:#25456f; }
-    .action svg { width:19px; height:19px; flex-shrink:0; }
-    .note { display:flex; align-items:flex-start; gap:11px; margin:25px 0 0; padding:17px 18px; background:#f6f8fb; border-radius:10px; color:#53637a; font-size:13px; line-height:1.65; }
-    .note svg { flex:none; width:19px; height:19px; color:#b28a3a; margin-top:1px; }
-    footer { text-align:center; border-top:1px solid #dce3eb; padding:25px; color:#6c7a8d; font-size:12px; }
-    :focus-visible { outline:3px solid var(--gold); outline-offset:4px; }
-    @media(max-width:680px) { .top { min-height:auto; } .wrap { padding:0 18px; } .header { padding-top:22px; } .logo { width:205px; } .header-tag { display:none; } .hero { padding:57px 0 108px; } .subtitle { font-size:14px; } main { margin-top:-61px; padding-bottom:45px; } .panel { padding:27px 20px; border-radius:16px; } .options { grid-template-columns:1fr; } .option { padding:23px; } .intro { font-size:14px; } }
-    @media(prefers-reduced-motion:reduce) { *,*::before,*::after {scroll-behavior:auto!important;transition:none!important;} }
+    :root {
+      --navy: #10233d;
+      --navy-light: #192f50;
+      --gold: #c5a04f;
+      --background: #f4f6f9;
+      --ink: #142843;
+      --muted: #617086;
+      --line: #dce3eb;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--ink);
+      background: var(--background);
+    }
+
+    a { -webkit-tap-highlight-color: transparent; }
+
+    .wrap {
+      max-width: 1000px;
+      padding: 0 26px;
+      margin: auto;
+    }
+
+    /* CABEÇALHO */
+
+    .top {
+      min-height: 340px;
+      background:
+        radial-gradient(circle at 85% 10%, #203a5d 0, transparent 35%),
+        linear-gradient(125deg, #172e4d, #0e2038 75%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .top::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 50%;
+      right: -190px;
+      bottom: -300px;
+      pointer-events: none;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 34px;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo {
+      display: block;
+      width: 248px;
+      max-width: 65vw;
+      padding: 11px 14px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.09);
+    }
+
+    .header-tag {
+      color: #c7d3df;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-weight: 700;
+    }
+
+    .hero {
+      padding: 65px 0 112px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      font-family: Montserrat, sans-serif;
+      letter-spacing: .23em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 11px;
+      margin: 0 0 16px;
+    }
+
+    h1 {
+      color: white;
+      font: 700 clamp(32px,5vw,51px)/1.18 Montserrat,sans-serif;
+      letter-spacing: -.04em;
+      margin: 0;
+      max-width: 760px;
+    }
+
+    .goldline {
+      width: 52px;
+      height: 3px;
+      background: var(--gold);
+      margin: 23px 0;
+    }
+
+    .subtitle {
+      color: #d5deeb;
+      font-size: 16px;
+      line-height: 1.8;
+      max-width: 680px;
+      margin: 0;
+    }
+
+    /* CONTEÚDO PRINCIPAL */
+
+    main {
+      margin-top: -72px;
+      position: relative;
+      z-index: 2;
+      padding-bottom: 72px;
+    }
+
+    .panel {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 18px 55px rgba(15,32,53,.07);
+      padding: 40px;
+    }
+
+    .section-tag {
+      font-size: 12px;
+      color: #a57e32;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+    }
+
+    h2 {
+      font: 800 clamp(22px,3.5vw,30px)/1.25 Montserrat,sans-serif;
+      margin: 0 0 14px;
+      letter-spacing: -.035em;
+    }
+
+    .intro {
+      color: var(--muted);
+      line-height: 1.8;
+      margin: 0 0 30px;
+      max-width: 760px;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .option {
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      padding: 27px;
+      display: flex;
+      flex-direction: column;
+      transition: transform .2s, border-color .2s, box-shadow .2s;
+      background: white;
+    }
+
+    .option:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold);
+      box-shadow: 0 14px 25px rgba(16,35,61,.08);
+    }
+
+    .option-number {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      background: #f5efe2;
+      color: #a27c30;
+      border-radius: 12px;
+      font: 800 16px Montserrat,sans-serif;
+      margin-bottom: 23px;
+    }
+
+    h3 {
+      font: 800 19px/1.35 Montserrat,sans-serif;
+      letter-spacing: -.025em;
+      margin: 0 0 12px;
+    }
+
+    .option p {
+      margin: 0 0 27px;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 14px;
+      flex-grow: 1;
+    }
+
+    .action {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border-radius: 10px;
+      padding: 15px 17px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 14px;
+      background: var(--navy);
+      color: white;
+      transition: background .2s;
+    }
+
+    .action:hover { background: #25456f; }
+
+    .action svg {
+      width: 19px;
+      height: 19px;
+      flex-shrink: 0;
+    }
+
+    .note {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      margin: 25px 0 0;
+      padding: 17px 18px;
+      background: #f6f8fb;
+      border-radius: 10px;
+      color: #53637a;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .note svg {
+      flex: none;
+      width: 19px;
+      height: 19px;
+      color: #b28a3a;
+      margin-top: 1px;
+    }
+
+    footer {
+      text-align: center;
+      border-top: 1px solid #dce3eb;
+      padding: 25px;
+      color: #6c7a8d;
+      font-size: 12px;
+    }
+
+    /* POP-UP CPA */
+
+    body.modal-open { overflow: hidden; }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      background: rgba(6,18,35,.78);
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      backdrop-filter: blur(6px);
+    }
+
+    .modal-overlay[hidden] { display: none; }
+
+    .modal {
+      background: white;
+      width: min(100%,640px);
+      border-radius: 22px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 24px 90px rgba(0,0,0,.3);
+      max-height: min(90dvh,760px);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-head {
+      background: var(--navy);
+      padding: 26px 34px 24px;
+      color: white;
+      flex: none;
+    }
+
+    .modal-heading-line {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      justify-content: space-between;
+    }
+
+    .modal-brand {
+      background: white;
+      width: 184px;
+      padding: 7px 10px;
+      border-radius: 9px;
+    }
+
+    .modal-close {
+      width: 38px;
+      height: 38px;
+      border: 1px solid #6b7f9a;
+      border-radius: 10px;
+      color: white;
+      background: transparent;
+      cursor: pointer;
+      font-size: 25px;
+      line-height: 1;
+    }
+
+    .modal-kicker {
+      margin: 24px 0 8px;
+      font-size: 11px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: var(--gold);
+    }
+
+    .modal-head h2 {
+      color: white;
+      font-size: clamp(23px,4vw,30px);
+      margin: 0;
+    }
+
+    /* INDICADOR DAS 3 ETAPAS */
+
+    .steps {
+      display: flex;
+      gap: 9px;
+      margin-top: 22px;
+    }
+
+    .step-pill {
+      flex: 1;
+      height: 5px;
+      border-radius: 9px;
+      background: #53647d;
+      transition: background .2s;
+    }
+
+    .step-pill.active { background: var(--gold); }
+
+    .modal-body {
+      padding: 31px 34px;
+      overflow: auto;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .step-count {
+      font-size: 12px;
+      color: #a27b30;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .step-content h3 {
+      font-size: clamp(20px,3vw,25px);
+      margin: 12px 0 17px;
+    }
+
+    .step-content p {
+      color: #526278;
+      line-height: 1.75;
+      font-size: 15px;
+      margin: 0 0 14px;
+    }
+
+    .step-content strong { color: var(--navy); }
+
+    .date-banner {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-radius: 11px;
+      background: #f5f0e5;
+      color: #725821;
+      padding: 14px 17px;
+      margin: 16px 0 20px;
+      font-weight: 800;
+    }
+
+    .date-banner svg {
+      width: 21px;
+      flex: none;
+    }
+
+    /* BOTÕES DO POP-UP */
+
+    .modal-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 19px 34px;
+      border-top: 1px solid var(--line);
+      flex: none;
+    }
+
+    .modal-foot button,
+    .modal-foot a {
+      font: 700 14px 'DM Sans',sans-serif;
+      padding: 13px 22px;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .btn-prev {
+      border: 1px solid var(--line);
+      color: var(--navy);
+      background: white;
+    }
+
+    .btn-next {
+      border: 1px solid var(--navy);
+      color: white;
+      background: var(--navy);
+      margin-left: auto;
+    }
+
+    .btn-next:hover { background: #28456b; }
+
+    .btn-prev[hidden],
+    .btn-next[hidden],
+    .modal-foot a[hidden] {
+      display: none;
+    }
+
+    .modal-foot .btn-form {
+      background: var(--navy);
+      color: white;
+      margin-left: auto;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    /* RESPONSIVIDADE */
+
+    @media(max-width:680px) {
+      .top { min-height: auto; }
+      .wrap { padding: 0 18px; }
+      .header { padding-top: 22px; }
+      .logo { width: 205px; }
+      .header-tag { display: none; }
+      .hero { padding: 57px 0 108px; }
+      .subtitle { font-size: 14px; }
+
+      main {
+        margin-top: -61px;
+        padding-bottom: 45px;
+      }
+
+      .panel {
+        padding: 27px 20px;
+        border-radius: 16px;
+      }
+
+      .options { grid-template-columns: 1fr; }
+      .option { padding: 23px; }
+      .intro { font-size: 14px; }
+
+      .modal-overlay { padding: 10px; }
+
+      .modal {
+        max-height: 94dvh;
+        border-radius: 16px;
+      }
+
+      .modal-head { padding: 20px 21px; }
+      .modal-brand { width: 158px; }
+      .modal-body { padding: 24px 21px; }
+      .modal-foot { padding: 16px 21px; }
+
+      .modal-foot button,
+      .modal-foot a {
+        padding: 12px 15px;
+      }
+
+      .step-content p { font-size: 14px; }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
   </style>
 </head>
+
 <body>
+
+  <!-- CABEÇALHO -->
+
   <header class="top">
     <div class="wrap">
+
       <div class="header">
-        <img class="logo" src="./logo-futurus.png" alt="Faculdade Singular Futurus" />
+        <img
+          class="logo"
+          src="./logo-futurus.png"
+          alt="Faculdade Singular Futurus"
+        >
         <span class="header-tag">Autoavaliação institucional</span>
       </div>
+
       <div class="hero">
         <p class="eyebrow">Comissão Própria de Avaliação</p>
+
         <h1>CPA 2026 — Sua participação faz a diferença.</h1>
+
         <div class="goldline"></div>
-        <p class="subtitle">Sua opinião contribui para o aprimoramento do ensino, dos serviços e da experiência acadêmica na Faculdade Singular Futurus.</p>
+
+        <p class="subtitle">
+          Sua opinião contribui para o aprimoramento do ensino,
+          dos serviços e da experiência acadêmica na
+          Faculdade Singular Futurus.
+        </p>
       </div>
+
     </div>
   </header>
+
+  <!-- AVALIAÇÕES -->
+
   <main class="wrap">
     <section class="panel" aria-labelledby="avaliacao-titulo">
+
       <p class="section-tag">Participe da CPA 2026</p>
+
       <h2 id="avaliacao-titulo">FAÇA SUA AVALIAÇÃO</h2>
-      <p class="intro">Prezado(a) Estudante, esponda com atenção e sinceridade: sua contribuição é essencial para construirmos uma instituição cada vez melhor.</p>
+
+      <p class="intro">
+        Prezado(a) Estudante, responda com atenção e sinceridade:
+        sua contribuição é essencial para construirmos uma
+        instituição cada vez melhor.
+      </p>
+
       <div class="options">
+
+        <!-- AVALIAÇÃO GERAL -->
+
         <article class="option">
-          <span class="option-number" aria-hidden="true">01</span>
+          <span class="option-number">01</span>
+
           <h3>Avaliação Geral</h3>
-          <p>Espaço para os estudantes avaliarem suas experiências com os cursos, as atividades acadêmicas e os serviços oferecidos pela Faculdade.</p>
-          <a class="action" href="https://cpa-futurus.lovable.app/f/cpa-2026-estudantes" target="_blank" rel="noopener noreferrer" aria-label="Acessar avaliação dos estudantes, abre em nova aba">Acessar avaliação <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+
+          <p>
+            Espaço para os estudantes avaliarem suas experiências
+            com os cursos, as atividades acadêmicas e os serviços
+            oferecidos pela Faculdade.
+          </p>
+
+          <a
+            class="action"
+            id="open-student-modal"
+            href="https://cpa-futurus.lovable.app/f/cpa-2026-estudantes"
+            aria-haspopup="dialog"
+          >
+            Acessar avaliação
+            <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14m-7-7 7 7-7 7"/>
+            </svg>
+          </a>
         </article>
+
+        <!-- AVALIAÇÃO DOCENTE -->
+
         <article class="option">
-          <span class="option-number" aria-hidden="true">02</span>
+          <span class="option-number">02</span>
+
           <h3>Avaliação Docente</h3>
-          <p>Espaço para os estudantes avaliarem suas experiências na relação direta com os professores e o processo de ensino-aprendizagem.</p>
-          <a class="action" href="https://cpa-futurus.lovable.app/avaliacao-docente" target="_blank" rel="noopener noreferrer" aria-label="Acessar avaliação docente, abre em nova aba">Acessar avaliação <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+
+          <p>
+            Espaço para os estudantes avaliarem suas experiências
+            na relação direta com os professores e o processo
+            de ensino-aprendizagem.
+          </p>
+
+          <a
+            class="action"
+            href="https://cpa-futurus.lovable.app/avaliacao-docente"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Acessar avaliação
+            <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14m-7-7 7 7-7 7"/>
+            </svg>
+          </a>
         </article>
+
       </div>
-      <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg><span>As respostas serão analisadas em conjunto e tratadas com confidencialidade, conforme as orientações da CPA. Participe com base em sua experiência.</span></div>
+
+      <div class="note">
+        <svg viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+
+        <span>
+          As respostas serão analisadas em conjunto e tratadas
+          com confidencialidade, conforme as orientações da CPA.
+          Participe com base em sua experiência.
+        </span>
+      </div>
+
     </section>
   </main>
-  <footer>© 2026 Faculdade Singular Futurus · Comissão Própria de Avaliação</footer>
+
+  <!-- POP-UP INTERATIVO EM 3 ETAPAS -->
+
+  <div class="modal-overlay" id="cpa-modal" hidden>
+
+    <section
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+      aria-describedby="modal-description"
+    >
+
+      <div class="modal-head">
+
+        <div class="modal-heading-line">
+
+          <img
+            class="modal-brand"
+            src="./logo-futurus.png"
+            alt="Faculdade Singular Futurus"
+          >
+
+          <button
+            type="button"
+            class="modal-close"
+            id="modal-close"
+            aria-label="Fechar orientações"
+          >&times;</button>
+
+        </div>
+
+        <p class="modal-kicker">
+          Comissão Própria de Avaliação · CPA
+        </p>
+
+        <h2 id="modal-title">
+          Avaliação Institucional 2026
+        </h2>
+
+        <div class="steps" aria-label="Progresso das orientações">
+          <span class="step-pill active"></span>
+          <span class="step-pill"></span>
+          <span class="step-pill"></span>
+        </div>
+
+      </div>
+
+      <div class="modal-body" id="modal-description">
+
+        <!-- ETAPA 1 -->
+
+        <div class="step-content" data-step="0">
+
+          <span class="step-count">
+            Etapa 01 de 03 · Boas-vindas
+          </span>
+
+          <h3>
+            Sua opinião faz parte da construção da Futurus.
+          </h3>
+
+          <p><strong>Olá, estudante!</strong></p>
+
+          <p>
+            Entre os dias <strong>29 de outubro e 09 de novembro
+            de 2026</strong>, estará disponível a Avaliação
+            Institucional da Faculdade Singular Futurus,
+            coordenada pela Comissão Própria de Avaliação (CPA).
+          </p>
+
+          <p>
+            Este é um importante momento de escuta da nossa
+            comunidade acadêmica. Queremos conhecer sua experiência
+            e sua percepção sobre a Faculdade.
+          </p>
+
+        </div>
+
+        <!-- ETAPA 2 -->
+
+        <div class="step-content" data-step="1" hidden>
+
+          <span class="step-count">
+            Etapa 02 de 03 · Por que participar?
+          </span>
+
+          <h3>
+            A sua voz contribui para a melhoria da Faculdade.
+          </h3>
+
+          <p>
+            A CPA conduz a autoavaliação institucional com a
+            participação de estudantes, professores, colaboradores
+            e representantes da sociedade civil.
+          </p>
+
+          <p>
+            Suas respostas ajudam a
+            <strong>
+              identificar pontos positivos, reconhecer
+              oportunidades de melhoria e planejar novas ações
+            </strong>
+            para o ensino, a gestão e os serviços oferecidos.
+          </p>
+
+          <p>
+            Mais do que uma pesquisa de opinião, a avaliação
+            gera resultados que serão analisados pela CPA
+            e utilizados no planejamento e aprimoramento
+            dos processos acadêmicos e institucionais.
+          </p>
+
+        </div>
+
+        <!-- ETAPA 3 -->
+
+        <div class="step-content" data-step="2" hidden>
+
+          <span class="step-count">
+            Etapa 03 de 03 · Participe
+          </span>
+
+          <h3>Agora é a sua vez de participar!</h3>
+
+          <p>
+            <strong>Quem participa?</strong>
+            Todos os estudantes da Faculdade Singular Futurus
+            são convidados a responder ao questionário.
+          </p>
+
+          <div class="date-banner">
+            <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="16" rx="2"/>
+              <path d="M16 3v4M8 3v4M3 10h18"/>
+            </svg>
+            29/10 a 09/11 de 2026
+          </div>
+
+          <p>
+            <strong>Como participar?</strong>
+            Clique em "Responder avaliação" abaixo para
+            abrir o formulário dos estudantes.
+          </p>
+
+          <p>
+            A participação leva apenas alguns minutos,
+            mas pode contribuir significativamente para
+            o desenvolvimento da nossa Faculdade.
+          </p>
+
+          <p>
+            <strong>
+              Sua experiência, sua percepção e sua voz
+              são importantes para nós.
+            </strong>
+          </p>
+
+          <p>
+            Comissão Própria de Avaliação – CPA
+            <br>
+            Faculdade Singular Futurus
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- NAVEGAÇÃO DAS ETAPAS -->
+
+      <div class="modal-foot">
+
+        <button
+          type="button"
+          id="prev-step"
+          class="btn-prev"
+          hidden
+        >
+          ← Anterior
+        </button>
+
+        <button
+          type="button"
+          id="next-step"
+          class="btn-next"
+        >
+          Próximo →
+        </button>
+
+        <a
+          class="btn-form"
+          id="student-link"
+          href="https://cpa-futurus.lovable.app/f/cpa-2026-estudantes"
+          target="_blank"
+          rel="noopener noreferrer"
+          hidden
+        >
+          Responder avaliação ↗
+        </a>
+
+      </div>
+
+    </section>
+  </div>
+
+  <!-- RODAPÉ -->
+
+  <footer>
+    © 2026 Faculdade Singular Futurus · Comissão Própria de Avaliação
+  </footer>
+
+  <!-- FUNCIONAMENTO DO POP-UP -->
+
+  <script>
+    (() => {
+
+      const overlay = document.getElementById('cpa-modal');
+      const trigger = document.getElementById('open-student-modal');
+      const close = document.getElementById('modal-close');
+      const prev = document.getElementById('prev-step');
+      const next = document.getElementById('next-step');
+      const link = document.getElementById('student-link');
+
+      const screens = [
+        ...document.querySelectorAll('.step-content')
+      ];
+
+      const bars = [
+        ...document.querySelectorAll('.step-pill')
+      ];
+
+      let step = 0;
+      let returnFocus = null;
+
+      function update() {
+
+        screens.forEach((el, i) => {
+          el.hidden = i !== step;
+        });
+
+        bars.forEach((el, i) => {
+          el.classList.toggle('active', i <= step);
+        });
+
+        prev.hidden = step === 0;
+        next.hidden = step === 2;
+        link.hidden = step !== 2;
+
+        document.querySelector('.modal-body').scrollTop = 0;
+      }
+
+      function openModal(e) {
+
+        if (e) e.preventDefault();
+
+        returnFocus = document.activeElement;
+
+        step = 0;
+        update();
+
+        overlay.hidden = false;
+        document.body.classList.add('modal-open');
+
+        close.focus();
+
+        try {
+          sessionStorage.setItem('futurus-cpa-intro-seen', '1');
+        } catch (_) {}
+      }
+
+      function closeModal() {
+
+        overlay.hidden = true;
+        document.body.classList.remove('modal-open');
+
+        if (returnFocus && typeof returnFocus.focus === 'function') {
+          returnFocus.focus();
+        }
+      }
+
+      trigger.addEventListener('click', openModal);
+
+      close.addEventListener('click', closeModal);
+
+      next.addEventListener('click', () => {
+        if (step < 2) {
+          step++;
+          update();
+        }
+      });
+
+      prev.addEventListener('click', () => {
+        if (step > 0) {
+          step--;
+          update();
+        }
+      });
+
+      overlay.addEventListener('click', e => {
+        if (e.target === overlay) closeModal();
+      });
+
+      link.addEventListener('click', closeModal);
+
+      document.addEventListener('keydown', e => {
+
+        if (overlay.hidden) return;
+
+        if (e.key === 'Escape') {
+          closeModal();
+        }
+
+        if (e.key === 'Tab') {
+
+          const focusable = [
+            ...overlay.querySelectorAll(
+              'button:not([hidden]), a:not([hidden])'
+            )
+          ];
+
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (
+            !e.shiftKey && document.activeElement === last
+          ) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+
+      });
+
+      // Exibir o pop-up automaticamente uma vez por sessão.
+
+      let seen = false;
+
+      try {
+        seen = sessionStorage.getItem(
+          'futurus-cpa-intro-seen'
+        ) === '1';
+      } catch (_) {}
+
+      if (!seen) {
+        openModal();
+      }
+
+    })();
+  </script>
+
 </body>
 </html>
