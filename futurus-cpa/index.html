@@ -23,9 +23,13 @@
       --line: #dce3eb;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -34,7 +38,17 @@
       background: var(--background);
     }
 
-    a { -webkit-tap-highlight-color: transparent; }
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
 
     .wrap {
       max-width: 1000px;
@@ -234,7 +248,9 @@
       transition: background .2s;
     }
 
-    .action:hover { background: #25456f; }
+    .action:hover {
+      background: #25456f;
+    }
 
     .action svg {
       width: 19px;
@@ -273,7 +289,9 @@
 
     /* POP-UP CPA */
 
-    body.modal-open { overflow: hidden; }
+    body.modal-open {
+      overflow: hidden;
+    }
 
     .modal-overlay {
       position: fixed;
@@ -285,8 +303,6 @@
       padding: 20px;
       backdrop-filter: blur(6px);
     }
-
-    .modal-overlay[hidden] { display: none; }
 
     .modal {
       background: white;
@@ -348,7 +364,7 @@
       margin: 0;
     }
 
-    /* INDICADOR DAS 3 ETAPAS */
+    /* INDICADOR DAS ETAPAS */
 
     .steps {
       display: flex;
@@ -364,13 +380,16 @@
       transition: background .2s;
     }
 
-    .step-pill.active { background: var(--gold); }
+    .step-pill.active {
+      background: var(--gold);
+    }
 
     .modal-body {
       padding: 31px 34px;
-      overflow: auto;
+      overflow-y: auto;
       flex: 1;
       min-height: 0;
+      overscroll-behavior: contain;
     }
 
     .step-count {
@@ -393,7 +412,9 @@
       margin: 0 0 14px;
     }
 
-    .step-content strong { color: var(--navy); }
+    .step-content strong {
+      color: var(--navy);
+    }
 
     .date-banner {
       display: flex;
@@ -424,14 +445,12 @@
       flex: none;
     }
 
-    .modal-foot button,
-    .modal-foot a {
+    .modal-foot button {
       font: 700 14px 'DM Sans',sans-serif;
       padding: 13px 22px;
       border-radius: 10px;
       cursor: pointer;
-      text-decoration: none;
-      text-align: center;
+      transition: background .2s;
     }
 
     .btn-prev {
@@ -440,25 +459,17 @@
       background: white;
     }
 
-    .btn-next {
+    .btn-next,
+    .btn-form {
       border: 1px solid var(--navy);
       color: white;
       background: var(--navy);
       margin-left: auto;
     }
 
-    .btn-next:hover { background: #28456b; }
-
-    .btn-prev[hidden],
-    .btn-next[hidden],
-    .modal-foot a[hidden] {
-      display: none;
-    }
-
-    .modal-foot .btn-form {
-      background: var(--navy);
-      color: white;
-      margin-left: auto;
+    .btn-next:hover,
+    .btn-form:hover {
+      background: #28456b;
     }
 
     :focus-visible {
@@ -469,13 +480,33 @@
     /* RESPONSIVIDADE */
 
     @media(max-width:680px) {
-      .top { min-height: auto; }
-      .wrap { padding: 0 18px; }
-      .header { padding-top: 22px; }
-      .logo { width: 205px; }
-      .header-tag { display: none; }
-      .hero { padding: 57px 0 108px; }
-      .subtitle { font-size: 14px; }
+      .top {
+        min-height: auto;
+      }
+
+      .wrap {
+        padding: 0 18px;
+      }
+
+      .header {
+        padding-top: 22px;
+      }
+
+      .logo {
+        width: 205px;
+      }
+
+      .header-tag {
+        display: none;
+      }
+
+      .hero {
+        padding: 57px 0 108px;
+      }
+
+      .subtitle {
+        font-size: 14px;
+      }
 
       main {
         margin-top: -61px;
@@ -487,28 +518,51 @@
         border-radius: 16px;
       }
 
-      .options { grid-template-columns: 1fr; }
-      .option { padding: 23px; }
-      .intro { font-size: 14px; }
+      .options {
+        grid-template-columns: 1fr;
+      }
 
-      .modal-overlay { padding: 10px; }
+      .option {
+        padding: 23px;
+      }
+
+      .intro {
+        font-size: 14px;
+      }
+
+      .modal-overlay {
+        padding: 10px;
+      }
 
       .modal {
         max-height: 94dvh;
         border-radius: 16px;
       }
 
-      .modal-head { padding: 20px 21px; }
-      .modal-brand { width: 158px; }
-      .modal-body { padding: 24px 21px; }
-      .modal-foot { padding: 16px 21px; }
-
-      .modal-foot button,
-      .modal-foot a {
-        padding: 12px 15px;
+      .modal-head {
+        padding: 20px 21px;
       }
 
-      .step-content p { font-size: 14px; }
+      .modal-brand {
+        width: 158px;
+      }
+
+      .modal-body {
+        padding: 24px 21px;
+      }
+
+      .modal-foot {
+        padding: 16px 21px;
+      }
+
+      .modal-foot button {
+        padding: 12px 15px;
+        font-size: 12px;
+      }
+
+      .step-content p {
+        font-size: 14px;
+      }
     }
 
     @media(prefers-reduced-motion:reduce) {
@@ -533,13 +587,19 @@
           src="./logo-futurus.png"
           alt="Faculdade Singular Futurus"
         >
-        <span class="header-tag">Autoavaliação institucional</span>
+        <span class="header-tag">
+          Autoavaliação institucional
+        </span>
       </div>
 
       <div class="hero">
-        <p class="eyebrow">Comissão Própria de Avaliação</p>
+        <p class="eyebrow">
+          Comissão Própria de Avaliação
+        </p>
 
-        <h1>CPA 2026 — Sua participação faz a diferença.</h1>
+        <h1>
+          CPA 2026 — Sua participação faz a diferença.
+        </h1>
 
         <div class="goldline"></div>
 
@@ -553,14 +613,19 @@
     </div>
   </header>
 
-  <!-- AVALIAÇÕES -->
+  <!-- PÁGINA PRINCIPAL -->
 
-  <main class="wrap">
+  <main class="wrap" id="avaliacoes">
+
     <section class="panel" aria-labelledby="avaliacao-titulo">
 
-      <p class="section-tag">Participe da CPA 2026</p>
+      <p class="section-tag">
+        Participe da CPA 2026
+      </p>
 
-      <h2 id="avaliacao-titulo">FAÇA SUA AVALIAÇÃO</h2>
+      <h2 id="avaliacao-titulo">
+        FAÇA SUA AVALIAÇÃO
+      </h2>
 
       <p class="intro">
         Prezado(a) Estudante, responda com atenção e sinceridade:
@@ -570,10 +635,12 @@
 
       <div class="options">
 
-        <!-- AVALIAÇÃO GERAL -->
+        <!-- FORMULÁRIO 01 -->
 
         <article class="option">
-          <span class="option-number">01</span>
+          <span class="option-number" aria-hidden="true">
+            01
+          </span>
 
           <h3>Avaliação Geral</h3>
 
@@ -585,23 +652,28 @@
 
           <a
             class="action"
-            id="open-student-modal"
             href="https://cpa-futurus.lovable.app/f/cpa-2026-estudantes"
-            aria-haspopup="dialog"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Acessar Avaliação Geral, abre em nova aba"
           >
             Acessar avaliação
+
             <svg viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
+              stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
               <path d="M5 12h14m-7-7 7 7-7 7"/>
             </svg>
           </a>
         </article>
 
-        <!-- AVALIAÇÃO DOCENTE -->
+        <!-- FORMULÁRIO 02 -->
 
         <article class="option">
-          <span class="option-number">02</span>
+          <span class="option-number" aria-hidden="true">
+            02
+          </span>
 
           <h3>Avaliação Docente</h3>
 
@@ -616,11 +688,14 @@
             href="https://cpa-futurus.lovable.app/avaliacao-docente"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Acessar Avaliação Docente, abre em nova aba"
           >
             Acessar avaliação
+
             <svg viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
+              stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
               <path d="M5 12h14m-7-7 7 7-7 7"/>
             </svg>
           </a>
@@ -631,7 +706,8 @@
       <div class="note">
         <svg viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="1.8"
-          stroke-linecap="round" stroke-linejoin="round">
+          stroke-linecap="round" stroke-linejoin="round"
+          aria-hidden="true">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
           <path d="m9 12 2 2 4-4"/>
         </svg>
@@ -646,7 +722,7 @@
     </section>
   </main>
 
-  <!-- POP-UP INTERATIVO EM 3 ETAPAS -->
+  <!-- POP-UP EM 3 ETAPAS -->
 
   <div class="modal-overlay" id="cpa-modal" hidden>
 
@@ -661,7 +737,6 @@
       <div class="modal-head">
 
         <div class="modal-heading-line">
-
           <img
             class="modal-brand"
             src="./logo-futurus.png"
@@ -673,8 +748,9 @@
             class="modal-close"
             id="modal-close"
             aria-label="Fechar orientações"
-          >&times;</button>
-
+          >
+            &times;
+          </button>
         </div>
 
         <p class="modal-kicker">
@@ -685,7 +761,10 @@
           Avaliação Institucional 2026
         </h2>
 
-        <div class="steps" aria-label="Progresso das orientações">
+        <div
+          class="steps"
+          aria-label="Progresso das orientações"
+        >
           <span class="step-pill active"></span>
           <span class="step-pill"></span>
           <span class="step-pill"></span>
@@ -695,7 +774,7 @@
 
       <div class="modal-body" id="modal-description">
 
-        <!-- ETAPA 1 -->
+        <!-- ETAPA 01 -->
 
         <div class="step-content" data-step="0">
 
@@ -707,24 +786,27 @@
             Sua opinião faz parte da construção da Futurus.
           </h3>
 
-          <p><strong>Olá, estudante!</strong></p>
+          <p>
+            <strong>Olá, estudante!</strong>
+          </p>
 
           <p>
-            Entre os dias <strong>29 de outubro e 09 de novembro
-            de 2026</strong>, estará disponível a Avaliação
-            Institucional da Faculdade Singular Futurus,
-            coordenada pela Comissão Própria de Avaliação (CPA).
+            Entre os dias
+            <strong>29 de outubro e 09 de novembro de 2026</strong>,
+            estará disponível a Avaliação Institucional da
+            Faculdade Singular Futurus, coordenada pela
+            Comissão Própria de Avaliação (CPA).
           </p>
 
           <p>
             Este é um importante momento de escuta da nossa
-            comunidade acadêmica. Queremos conhecer sua experiência
-            e sua percepção sobre a Faculdade.
+            comunidade acadêmica. Queremos conhecer sua
+            experiência e sua percepção sobre a Faculdade.
           </p>
 
         </div>
 
-        <!-- ETAPA 2 -->
+        <!-- ETAPA 02 -->
 
         <div class="step-content" data-step="1" hidden>
 
@@ -760,7 +842,7 @@
 
         </div>
 
-        <!-- ETAPA 3 -->
+        <!-- ETAPA 03 -->
 
         <div class="step-content" data-step="2" hidden>
 
@@ -768,7 +850,9 @@
             Etapa 03 de 03 · Participe
           </span>
 
-          <h3>Agora é a sua vez de participar!</h3>
+          <h3>
+            Agora é a sua vez de participar!
+          </h3>
 
           <p>
             <strong>Quem participa?</strong>
@@ -779,17 +863,19 @@
           <div class="date-banner">
             <svg viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
+              stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
               <rect x="3" y="5" width="18" height="16" rx="2"/>
               <path d="M16 3v4M8 3v4M3 10h18"/>
             </svg>
+
             29/10 a 09/11 de 2026
           </div>
 
           <p>
             <strong>Como participar?</strong>
-            Clique em "Responder avaliação" abaixo para
-            abrir o formulário dos estudantes.
+            Clique em "Concluir e acessar avaliações" para
+            visualizar os dois formulários disponíveis.
           </p>
 
           <p>
@@ -815,7 +901,7 @@
 
       </div>
 
-      <!-- NAVEGAÇÃO DAS ETAPAS -->
+      <!-- BOTÕES DE NAVEGAÇÃO -->
 
       <div class="modal-foot">
 
@@ -836,16 +922,14 @@
           Próximo →
         </button>
 
-        <a
+        <button
+          type="button"
           class="btn-form"
-          id="student-link"
-          href="https://futurus-werx.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
+          id="finish-step"
           hidden
         >
-          Responder avaliação ↗
-        </a>
+          Concluir e acessar avaliações →
+        </button>
 
       </div>
 
@@ -855,145 +939,214 @@
   <!-- RODAPÉ -->
 
   <footer>
-    © 2026 Faculdade Singular Futurus · Comissão Própria de Avaliação
+    © 2026 Faculdade Singular Futurus ·
+    Comissão Própria de Avaliação
   </footer>
 
-  <!-- FUNCIONAMENTO DO POP-UP -->
+  <!-- JAVASCRIPT -->
 
   <script>
     (() => {
 
+      const STORAGE_KEY = 'futurus-cpa-intro-seen';
+
       const overlay = document.getElementById('cpa-modal');
-      const trigger = document.getElementById('open-student-modal');
-      const close = document.getElementById('modal-close');
-      const prev = document.getElementById('prev-step');
-      const next = document.getElementById('next-step');
-      const link = document.getElementById('student-link');
+      const modal = overlay.querySelector('.modal');
+      const closeButton = document.getElementById('modal-close');
+      const prevButton = document.getElementById('prev-step');
+      const nextButton = document.getElementById('next-step');
+      const finishButton = document.getElementById('finish-step');
+      const modalBody = overlay.querySelector('.modal-body');
 
       const screens = [
-        ...document.querySelectorAll('.step-content')
+        ...overlay.querySelectorAll('.step-content')
       ];
 
       const bars = [
-        ...document.querySelectorAll('.step-pill')
+        ...overlay.querySelectorAll('.step-pill')
       ];
 
       let step = 0;
-      let returnFocus = null;
+      let previousFocus = null;
 
-      function update() {
+      // Verificar se a apresentação já foi concluída.
 
-        screens.forEach((el, i) => {
-          el.hidden = i !== step;
-        });
-
-        bars.forEach((el, i) => {
-          el.classList.toggle('active', i <= step);
-        });
-
-        prev.hidden = step === 0;
-        next.hidden = step === 2;
-        link.hidden = step !== 2;
-
-        document.querySelector('.modal-body').scrollTop = 0;
+      function hasCompleted() {
+        try {
+          return localStorage.getItem(STORAGE_KEY) === '1';
+        } catch (error) {
+          return false;
+        }
       }
 
-      function openModal(e) {
+      // Salvar a conclusão no navegador.
 
-        if (e) e.preventDefault();
+      function saveCompleted() {
+        try {
+          localStorage.setItem(STORAGE_KEY, '1');
+        } catch (error) {
+          // A navegação continua funcionando mesmo
+          // quando o armazenamento estiver indisponível.
+        }
+      }
 
-        returnFocus = document.activeElement;
+      // Atualizar o conteúdo das três etapas.
 
+      function updateStep() {
+
+        screens.forEach((screen, index) => {
+          screen.hidden = index !== step;
+        });
+
+        bars.forEach((bar, index) => {
+          bar.classList.toggle('active', index <= step);
+        });
+
+        prevButton.hidden = step === 0;
+        nextButton.hidden = step === screens.length - 1;
+        finishButton.hidden = step !== screens.length - 1;
+
+        modalBody.scrollTop = 0;
+      }
+
+      // Abrir o pop-up.
+
+      function openModal() {
+
+        previousFocus = document.activeElement;
         step = 0;
-        update();
+
+        updateStep();
 
         overlay.hidden = false;
         document.body.classList.add('modal-open');
 
-        close.focus();
-
-        try {
-          sessionStorage.setItem('futurus-cpa-intro-seen', '1');
-        } catch (_) {}
+        closeButton.focus();
       }
+
+      // Fechar o pop-up.
 
       function closeModal() {
 
         overlay.hidden = true;
         document.body.classList.remove('modal-open');
 
-        if (returnFocus && typeof returnFocus.focus === 'function') {
-          returnFocus.focus();
+        if (
+          previousFocus &&
+          typeof previousFocus.focus === 'function'
+        ) {
+          previousFocus.focus();
         }
       }
 
-      trigger.addEventListener('click', openModal);
+      // Concluir e mostrar os dois formulários.
 
-      close.addEventListener('click', closeModal);
+      function finishPresentation() {
 
-      next.addEventListener('click', () => {
-        if (step < 2) {
+        saveCompleted();
+        closeModal();
+
+        const section = document.getElementById('avaliacoes');
+
+        if (section) {
+          section.scrollIntoView({
+            behavior: window.matchMedia(
+              '(prefers-reduced-motion: reduce)'
+            ).matches ? 'auto' : 'smooth',
+            block: 'start'
+          });
+        }
+      }
+
+      // Botão próximo.
+
+      nextButton.addEventListener('click', () => {
+        if (step < screens.length - 1) {
           step++;
-          update();
+          updateStep();
         }
       });
 
-      prev.addEventListener('click', () => {
+      // Botão anterior.
+
+      prevButton.addEventListener('click', () => {
         if (step > 0) {
           step--;
-          update();
+          updateStep();
         }
       });
 
-      overlay.addEventListener('click', e => {
-        if (e.target === overlay) closeModal();
+      // Botão concluir.
+
+      finishButton.addEventListener(
+        'click',
+        finishPresentation
+      );
+
+      // Botão fechar.
+      // Ao fechar, o estudante poderá escolher
+      // os formulários sem ficar preso no pop-up.
+
+      closeButton.addEventListener('click', () => {
+        saveCompleted();
+        closeModal();
       });
 
-      link.addEventListener('click', closeModal);
+      // Fechar ao clicar fora.
 
-      document.addEventListener('keydown', e => {
+      overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+          saveCompleted();
+          closeModal();
+        }
+      });
+
+      // Acessibilidade do teclado.
+
+      document.addEventListener('keydown', (event) => {
 
         if (overlay.hidden) return;
 
-        if (e.key === 'Escape') {
+        if (event.key === 'Escape') {
+          saveCompleted();
           closeModal();
+          return;
         }
 
-        if (e.key === 'Tab') {
+        if (event.key === 'Tab') {
 
           const focusable = [
-            ...overlay.querySelectorAll(
-              'button:not([hidden]), a:not([hidden])'
+            ...modal.querySelectorAll(
+              'button:not([hidden]):not([disabled]), a[href]:not([hidden])'
             )
-          ];
+          ].filter(element => element.getClientRects().length > 0);
+
+          if (!focusable.length) return;
 
           const first = focusable[0];
           const last = focusable[focusable.length - 1];
 
-          if (e.shiftKey && document.activeElement === first) {
-            e.preventDefault();
+          if (
+            event.shiftKey &&
+            document.activeElement === first
+          ) {
+            event.preventDefault();
             last.focus();
           } else if (
-            !e.shiftKey && document.activeElement === last
+            !event.shiftKey &&
+            document.activeElement === last
           ) {
-            e.preventDefault();
+            event.preventDefault();
             first.focus();
           }
         }
 
       });
 
-      // Exibir o pop-up automaticamente uma vez por sessão.
+      // Exibir apenas enquanto não houver conclusão
+      // registrada no navegador.
 
-      let seen = false;
-
-      try {
-        seen = sessionStorage.getItem(
-          'futurus-cpa-intro-seen'
-        ) === '1';
-      } catch (_) {}
-
-      if (!seen) {
+      if (!hasCompleted()) {
         openModal();
       }
 
