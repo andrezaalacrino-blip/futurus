@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#10233d" />
+  <meta name="description" content="Participe da Autoavaliação Institucional CPA 2026 da Faculdade Singular Futurus. Acesse os formulários de avaliação." />
+  <title>CPA 2026 | Faculdade Singular Futurus</title>
+  <link rel="icon" type="image/png" href="./logo-futurus.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --navy:#10233d; --navy-light:#192f50; --gold:#c5a04f; --background:#f4f6f9; --ink:#142843; --muted:#617086; --line:#dce3eb; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:'DM Sans',sans-serif; color:var(--ink); background:var(--background); }
+    a { -webkit-tap-highlight-color:transparent; }
+    .top { min-height:340px; background:radial-gradient(circle at 85% 10%, #203a5d 0, transparent 35%), linear-gradient(125deg,#172e4d,#0e2038 75%); position:relative; overflow:hidden; }
+    .top::after { content:""; position:absolute; width:500px; height:500px; border:1px solid rgba(255,255,255,.06); border-radius:50%; right:-190px; bottom:-300px; pointer-events:none; }
+    .wrap { max-width:1000px; padding:0 26px; margin:auto; }
+    .header { display:flex; justify-content:space-between; align-items:center; padding-top:34px; gap:20px; position:relative; z-index:1; }
+    .logo { display:block; width:248px; max-width:65vw; padding:11px 14px; background:white; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,.09); }
+    .header-tag { color:#c7d3df; font-size:12px; text-transform:uppercase; letter-spacing:.2em; font-weight:700; }
+    .hero { padding:65px 0 112px; position:relative; z-index:1; }
+    .eyebrow { font-family:Montserrat,sans-serif; letter-spacing:.23em; text-transform:uppercase; color:var(--gold); font-weight:800; font-size:11px; margin:0 0 16px; }
+    h1 { color:white; font:700 clamp(32px,5vw,51px)/1.18 Montserrat,sans-serif; letter-spacing:-.04em; margin:0; max-width:760px; }
+    .goldline { width:52px; height:3px; background:var(--gold); margin:23px 0; }
+    .subtitle { color:#d5deeb; font-size:16px; line-height:1.8; max-width:680px; margin:0; }
+    main { margin-top:-72px; position:relative; z-index:2; padding-bottom:72px; }
+    .panel { background:white; border:1px solid var(--line); border-radius:20px; box-shadow:0 18px 55px rgba(15,32,53,.07); padding:40px; }
+    .section-tag { font-size:12px; color:#a57e32; font-weight:800; letter-spacing:.15em; text-transform:uppercase; margin:0 0 10px; }
+    h2 { font:800 clamp(22px,3.5vw,30px)/1.25 Montserrat,sans-serif; margin:0 0 14px; letter-spacing:-.035em; }
+    .intro { color:var(--muted); line-height:1.8; margin:0 0 30px; max-width:760px; }
+    .options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .option { border:1px solid var(--line); border-radius:15px; padding:27px; display:flex; flex-direction:column; transition:transform .2s,border-color .2s,box-shadow .2s; background:#fff; }
+    .option:hover { transform:translateY(-3px); border-color:#c5a04f; box-shadow:0 14px 25px rgba(16,35,61,.08); }
+    .option-number { width:42px; height:42px; display:grid; place-items:center; background:#f5efe2; color:#a27c30; border-radius:12px; font:800 16px Montserrat,sans-serif; margin-bottom:23px; }
+    h3 { font:800 19px/1.35 Montserrat,sans-serif; letter-spacing:-.025em; margin:0 0 12px; }
+    .option p { margin:0 0 27px; color:var(--muted); line-height:1.75; font-size:14px; flex-grow:1; }
+    .action { display:flex; align-items:center; justify-content:space-between; gap:12px; border-radius:10px; padding:15px 17px; text-decoration:none; font-weight:800; font-size:14px; background:var(--navy); color:#fff; transition:background .2s; }
+    .action:hover { background:#25456f; }
+    .action svg { width:19px; height:19px; flex-shrink:0; }
+    .note { display:flex; align-items:flex-start; gap:11px; margin:25px 0 0; padding:17px 18px; background:#f6f8fb; border-radius:10px; color:#53637a; font-size:13px; line-height:1.65; }
+    .note svg { flex:none; width:19px; height:19px; color:#b28a3a; margin-top:1px; }
+    footer { text-align:center; border-top:1px solid #dce3eb; padding:25px; color:#6c7a8d; font-size:12px; }
+    :focus-visible { outline:3px solid var(--gold); outline-offset:4px; }
+    @media(max-width:680px) { .top { min-height:auto; } .wrap { padding:0 18px; } .header { padding-top:22px; } .logo { width:205px; } .header-tag { display:none; } .hero { padding:57px 0 108px; } .subtitle { font-size:14px; } main { margin-top:-61px; padding-bottom:45px; } .panel { padding:27px 20px; border-radius:16px; } .options { grid-template-columns:1fr; } .option { padding:23px; } .intro { font-size:14px; } }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after {scroll-behavior:auto!important;transition:none!important;} }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div class="header">
+        <img class="logo" src="./logo-futurus.png" alt="Faculdade Singular Futurus" />
+        <span class="header-tag">Autoavaliação institucional</span>
+      </div>
+      <div class="hero">
+        <p class="eyebrow">Comissão Própria de Avaliação</p>
+        <h1>CPA 2026 — Sua participação faz a diferença.</h1>
+        <div class="goldline"></div>
+        <p class="subtitle">Sua opinião contribui para o aprimoramento do ensino, dos serviços e da experiência acadêmica na Faculdade Singular Futurus.</p>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="panel" aria-labelledby="avaliacao-titulo">
+      <p class="section-tag">Participe da CPA 2026</p>
+      <h2 id="avaliacao-titulo">Selecione sua avaliação</h2>
+      <p class="intro">Escolha abaixo o formulário correspondente ao seu perfil. Responda com atenção e sinceridade: sua contribuição é essencial para construirmos uma instituição cada vez melhor.</p>
+      <div class="options">
+        <article class="option">
+          <span class="option-number" aria-hidden="true">01</span>
+          <h3>Avaliação dos Estudantes</h3>
+          <p>Espaço para os estudantes avaliarem suas experiências com os cursos, as atividades acadêmicas e os serviços oferecidos pela Faculdade.</p>
+          <a class="action" href="https://cpa-futurus.lovable.app/f/cpa-2026-estudantes" target="_blank" rel="noopener noreferrer" aria-label="Acessar avaliação dos estudantes, abre em nova aba">Acessar avaliação <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+        </article>
+        <article class="option">
+          <span class="option-number" aria-hidden="true">02</span>
+          <h3>Avaliação Docente</h3>
+          <p>Espaço destinado aos docentes para contribuir com a avaliação das condições institucionais, práticas acadêmicas e oportunidades de melhoria.</p>
+          <a class="action" href="https://cpa-futurus.lovable.app/avaliacao-docente" target="_blank" rel="noopener noreferrer" aria-label="Acessar avaliação docente, abre em nova aba">Acessar avaliação <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+        </article>
+      </div>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg><span>As respostas serão analisadas em conjunto e tratadas com confidencialidade, conforme as orientações da CPA. Participe com base em sua experiência.</span></div>
+    </section>
+  </main>
+  <footer>© 2026 Faculdade Singular Futurus · Comissão Própria de Avaliação</footer>
+</body>
+</html>
